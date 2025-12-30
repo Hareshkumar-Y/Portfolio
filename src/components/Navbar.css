@@ -1,0 +1,126 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-name {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--color-text);
+    line-height: 1;
+}
+
+.motto {
+    font-size: 0.75rem;
+    color: var(--color-secondary);
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+.desktop-menu {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--color-text);
+    transition: color 0.2s;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-secondary);
+    transition: width 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--color-secondary);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.mobile-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-text);
+}
+
+.mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #eee;
+}
+
+.mobile-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.mobile-link:hover {
+    background-color: var(--color-surface);
+    color: var(--color-secondary);
+}
+
+@media (max-width: 960px) {
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+}

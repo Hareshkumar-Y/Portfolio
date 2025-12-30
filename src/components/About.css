@@ -1,0 +1,107 @@
+.about-section {
+    padding: 100px 0;
+    background-color: white;
+    overflow: hidden;
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-subtitle {
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.highlight {
+    color: var(--color-text);
+    font-weight: 700;
+}
+
+.vision-mission-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.vm-card {
+    background: var(--color-surface);
+    padding: 30px;
+    border-radius: 16px;
+    border-left: 5px solid;
+    transition: transform 0.3s ease;
+}
+
+.vm-card:hover {
+    transform: translateX(10px);
+}
+
+.vm-card.vision {
+    border-color: var(--color-secondary);
+}
+
+.vm-card.mission {
+    border-color: var(--color-accent);
+}
+
+.vm-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.vm-icon {
+    font-size: 1.8rem;
+}
+
+.vision .vm-icon {
+    color: var(--color-secondary);
+}
+
+.mission .vm-icon {
+    color: var(--color-accent);
+}
+
+.vm-header h3 {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.vm-list {
+    list-style: none;
+    padding: 0;
+}
+
+.vm-list li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    color: var(--color-text-light);
+}
+
+.vm-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-text);
+    font-weight: bold;
+}
+
+@media (max-width: 960px) {
+    .about-layout {
+        grid-template-columns: 1fr;
+    }
+}

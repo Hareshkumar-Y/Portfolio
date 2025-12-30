@@ -1,0 +1,30 @@
+import React from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Introduction from './components/Introduction';
+import About from './components/About';
+import Leadership from './components/Leadership';
+import TechSpecs from './components/TechSpecs';
+import Achievements from './components/Achievements';
+import Sponsorship from './components/Sponsorship';
+import Footer from './components/Footer';
+
+function App() {
+  return (
+    <div className="app">
+      <Navbar />
+      <main>
+        <Hero />
+        <Introduction />
+        <About />
+        <TechSpecs />
+        <Achievements />
+        <Leadership />
+        <Sponsorship />
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
+export default App;

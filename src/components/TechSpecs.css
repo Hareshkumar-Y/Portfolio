@@ -1,0 +1,63 @@
+.tech-section {
+    padding: 100px 0;
+    background-color: var(--color-bg);
+}
+
+.tech-header {
+    margin-bottom: 60px;
+}
+
+.tech-model {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-secondary);
+    letter-spacing: 2px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tech-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-top: 5px solid transparent;
+}
+
+.tech-card:hover {
+    border-top-color: var(--color-secondary);
+}
+
+.tech-icon {
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+    margin-bottom: 24px;
+}
+
+.tech-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--color-text);
+}
+
+.tech-details {
+    list-style: none;
+    padding: 0;
+}
+
+.tech-details li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    color: var(--color-text-light);
+}
+
+.tech-details li:last-child {
+    border-bottom: none;
+}
