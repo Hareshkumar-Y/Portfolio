@@ -46,10 +46,7 @@ const Navbar = () => {
                         className="logo-icon"
                     >
                         {/* Abstract Bird/Wing Logo Placeholder */}
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 5L35 20L20 35L5 20L20 5Z" fill="#2E7D32" />
-                            <path d="M20 10L30 20L20 30L10 20L20 10Z" fill="white" />
-                        </svg>
+                        <img src="src/assets/astra.jpeg" alt="logo" className="logo-icon" />
                     </motion.div>
                     <div className="logo-text">
                         <span className="team-name">ASTRA</span>

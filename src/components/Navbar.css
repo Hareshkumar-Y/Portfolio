@@ -29,6 +29,13 @@
     cursor: pointer;
 }
 
+.logo-icon {
+    width: 120px;
+    height: 50px;
+    object-fit: cover;
+    /* border-radius: 50%; */
+}
+
 .logo-text {
     display: flex;
     flex-direction: column;
