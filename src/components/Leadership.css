@@ -59,3 +59,46 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
+
+@media (max-width: 768px) {
+    .team-section {
+        padding: 40px 0;
+        /* Compact padding */
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on mobile */
+        gap: 15px;
+        /* Tighter gap */
+        margin-top: 30px;
+    }
+
+    .team-card {
+        padding: 15px;
+        /* Reduced card padding */
+    }
+
+    .member-image-wrapper {
+        width: 80px;
+        /* Smaller image */
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .member-name {
+        font-size: 1rem;
+    }
+
+    .member-role {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr 1fr;
+        /* Keep 2 cols even on small screens */
+        gap: 10px;
+    }
+}

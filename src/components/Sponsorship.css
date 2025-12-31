@@ -176,3 +176,35 @@
     transform: scale(1.1);
     opacity: 1;
 }
+
+@media (max-width: 768px) {
+    .sponsorship-section {
+        padding: 40px 0;
+    }
+
+    .sponsor-header {
+        margin-bottom: 30px;
+    }
+
+    .packages-grid {
+        grid-template-columns: 1fr;
+        /* Stack packages */
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .package-card {
+        padding: 30px 20px;
+    }
+
+    .partners-section {
+        margin-top: 50px;
+    }
+
+    .partner-logo {
+        min-width: 120px;
+        /* Smaller logos */
+        height: 80px;
+        padding: 10px;
+    }
+}

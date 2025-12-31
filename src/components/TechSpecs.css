@@ -61,3 +61,34 @@
 .tech-details li:last-child {
     border-bottom: none;
 }
+
+@media (max-width: 768px) {
+    .tech-section {
+        padding: 40px 0;
+    }
+
+    .tech-header {
+        margin-bottom: 30px;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+        /* Stack cards */
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .tech-card {
+        padding: 25px 20px;
+        /* Compact padding */
+    }
+
+    .tech-model {
+        font-size: 2rem;
+    }
+
+    .tech-icon {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+}

@@ -173,18 +173,32 @@
 }
 
 @media (max-width: 768px) {
+    .achievements-section {
+        padding: 40px 0;
+        /* Compact padding */
+    }
+
+    .timeline {
+        margin-top: 30px;
+    }
+
     .timeline::after {
-        left: 31px;
+        left: 21px;
+        /* Adjusted for new line position */
     }
 
     .timeline-line {
-        left: 40px;
+        left: 30px;
+        /* Shift line left */
     }
 
     .timeline-item {
         width: 100%;
-        padding-left: 80px;
-        padding-right: 25px;
+        padding-left: 60px;
+        /* Reduced from 80px */
+        padding-right: 15px;
+        /* Reduced right padding */
+        margin-bottom: 40px;
     }
 
     .timeline-item.left,

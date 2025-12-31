@@ -163,11 +163,16 @@
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
-        padding-top: 40px;
+        padding-top: 20px;
+        /* Reduced specific padding */
+        gap: 20px;
+        /* Tighter gap */
     }
 
     .hero-content {
         align-items: center;
+        gap: 10px;
+        /* Tighter content gap */
     }
 
     .hero-motto {
@@ -175,9 +180,29 @@
         padding-left: 0;
         border-bottom: 3px solid var(--color-accent);
         padding-bottom: 8px;
+        font-size: 1.2rem;
+        /* Smaller motto */
     }
 
     .hero-title {
-        font-size: 3rem;
+        font-size: 2.8rem;
+        /* Compact Title */
+        letter-spacing: -1px;
+    }
+
+    .hero-buttons {
+        margin-top: 20px;
+        /* Closer buttons */
+    }
+
+    .car-image {
+        width: 70%;
+        /* Smaller car */
+        max-width: 350px;
+    }
+
+    /* Hide stat cards on mobile to declutter */
+    .stat-card {
+        display: none;
     }
 }

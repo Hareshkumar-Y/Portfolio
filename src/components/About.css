@@ -101,7 +101,13 @@
 }
 
 @media (max-width: 960px) {
+    .about-section {
+        padding: 40px 0;
+        /* Compact padding */
+    }
+
     .about-layout {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
 }

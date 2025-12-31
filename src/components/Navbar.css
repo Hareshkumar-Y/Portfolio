@@ -140,6 +140,11 @@
 }
 
 @media (max-width: 960px) {
+    .navbar {
+        padding: 10px 0;
+        /* Simmer navbar */
+    }
+
     .desktop-menu {
         display: none;
     }
