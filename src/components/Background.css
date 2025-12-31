@@ -1,0 +1,46 @@
+.global-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    /* Behind everything */
+    overflow: hidden;
+    background: #f8f9fa;
+    /* Light Greyish White Base */
+    pointer-events: none;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    /* Soft blur for abstract feel */
+    opacity: 0.6;
+}
+
+.blob-red-1 {
+    top: -10%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(211, 47, 47, 0.87) 0%, rgba(243, 91, 91, 0.93) 70%);
+}
+
+.blob-white-1 {
+    top: 40%;
+    left: 20%;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(230, 230, 230, 0.2) 70%);
+    opacity: 0.8;
+}
+
+.blob-red-2 {
+    bottom: -10%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(198, 40, 40, 0.762) 0%, rgba(242, 82, 82, 0.833) 70%);
+}

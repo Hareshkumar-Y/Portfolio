@@ -8,10 +8,12 @@ import TechSpecs from './components/TechSpecs';
 import Achievements from './components/Achievements';
 import Sponsorship from './components/Sponsorship';
 import Footer from './components/Footer';
+import Background from './components/Background';
 
 function App() {
   return (
     <div className="app">
+      <Background />
       <Navbar />
       <main>
         <Hero />
