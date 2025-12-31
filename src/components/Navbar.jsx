@@ -19,7 +19,7 @@ const Navbar = () => {
         { name: "Introduction", href: "#intro" },
         { name: "The Team", href: "#team" },
         { name: "About Us", href: "#about" },
-        { name: "Solar Car", href: "#car" },
+        { name: "Solar Car", href: "#hero" },
         { name: "Technical Overview", href: "#tech" },
         { name: "Achievements", href: "#achievements" },
         { name: "Sponsors", href: "#sponsors" },

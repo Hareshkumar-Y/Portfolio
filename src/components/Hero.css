@@ -35,6 +35,7 @@
     font-weight: 800;
     line-height: 1;
     background: linear-gradient(135deg, var(--color-text) 0%, var(--color-text-light) 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -2px;
@@ -112,8 +113,9 @@
 }
 
 .car-image {
-    width: 100%;
+    width: 80%;
     height: auto;
+    /* border: 10px solid var(--color-text); */
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
 }
 
@@ -130,13 +132,13 @@
 }
 
 .stat-1 {
-    top: 10%;
-    right: 0;
+    top: 20%;
+    right: 20%;
 }
 
 .stat-2 {
-    bottom: 10%;
-    left: 0;
+    bottom: 20%;
+    left: 10%;
 }
 
 .stat-value {

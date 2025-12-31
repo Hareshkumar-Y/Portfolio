@@ -3,6 +3,19 @@ import { motion } from 'framer-motion';
 import { FaCheck } from 'react-icons/fa';
 import './Sponsorship.css';
 
+import SolidworksLogo from '../assets/Solidworks.png';
+import AnsysLogo from '../assets/ansys.png';
+import MrfLogo from '../assets/mrf.png';
+import SaktheeswaranLogo from '../assets/saktheeswaran.png';
+import AirgapLogo from '../assets/airgap.png';
+import UnitekLogo from '../assets/unitek.png';
+import InoproLogo from '../assets/inopro.png';
+import SlvLogo from '../assets/slv.png';
+import GpLogo from '../assets/gp.png';
+import AurovilleLogo from '../assets/auroville.png';
+import SakthiLogo from '../assets/sakthe.png';
+import EswaraLogo from '../assets/eswara.png';
+
 const PackageCard = ({ tier, price, features, recommended, delay }) => {
     return (
         <motion.div
@@ -27,7 +40,26 @@ const PackageCard = ({ tier, price, features, recommended, delay }) => {
 };
 
 const Sponsorship = () => {
-    const brands = ["Solidworks", "Ansys", "MRF Tyres", "Saktheeswaran", "Auroville Energy", "Airgap Technology"];
+    const allBrands = [
+        { name: "Solidworks", logo: SolidworksLogo },
+        { name: "Ansys", logo: AnsysLogo },
+        { name: "MRF Tyres", logo: MrfLogo },
+        { name: "Saktheeswaran", logo: SaktheeswaranLogo },
+        { name: "Airgap Technology", logo: AirgapLogo },
+        { name: "UinTek hydraulics", logo: UnitekLogo },
+        { name: "Inopro solutions", logo: InoproLogo },
+        { name: "SLV-PRO MECA", logo: SlvLogo },
+        { name: "GP industries", logo: GpLogo },
+        { name: "Auroville Energy", logo: AurovilleLogo },
+        { name: "Eco fab", logo: null }, // No logo available
+        { name: "Sakthi Tools", logo: SakthiLogo },
+        { name: "Easwara agro", logo: EswaraLogo }
+    ];
+
+    // Split brands into two relatively equal parts
+    const splitIndex = Math.ceil(allBrands.length / 2);
+    const brandsRow1 = allBrands.slice(0, splitIndex);
+    const brandsRow2 = allBrands.slice(splitIndex);
 
     return (
         <section id="sponsors" className="sponsorship-section">
@@ -95,18 +127,60 @@ const Sponsorship = () => {
 
                 <div className="partners-section">
                     <h3 className="partners-title">Trusted By Industry Leaders</h3>
-                    <div className="partners-grid">
-                        {brands.map((brand, i) => (
-                            <motion.div
-                                key={i}
-                                className="partner-logo"
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
-                                transition={{ delay: i * 0.1 }}
-                            >
-                                {brand}
-                            </motion.div>
-                        ))}
+
+                    <div className="partners-carousel-wrapper">
+                        {/* Row 1 - Scroll Left */}
+                        <motion.div
+                            className="partners-track"
+                            animate={{
+                                x: ["0%", "-50%"]
+                            }}
+                            transition={{
+                                x: {
+                                    repeat: Infinity,
+                                    repeatType: "loop",
+                                    duration: 80,
+                                    ease: "linear"
+                                }
+                            }}
+                        >
+                            {[...brandsRow1, ...brandsRow1].map((brand, i) => (
+                                <div key={i} className="partner-logo">
+                                    {brand.logo ? (
+                                        <img src={brand.logo} alt={brand.name} className="partner-logo-img" />
+                                    ) : (
+                                        <span className="brand-name">{brand.name}</span>
+                                    )}
+                                </div>
+                            ))}
+                        </motion.div>
+
+                        {/* Row 2 - Scroll Right */}
+                        <motion.div
+                            className="partners-track"
+                            animate={{
+                                x: ["-50%", "0%"]
+                            }}
+                            transition={{
+                                x: {
+                                    repeat: Infinity,
+                                    repeatType: "loop",
+                                    duration: 80,
+                                    ease: "linear"
+                                }
+                            }}
+                            style={{ marginTop: '30px' }}
+                        >
+                            {[...brandsRow2, ...brandsRow2].map((brand, i) => (
+                                <div key={i} className="partner-logo">
+                                    {brand.logo ? (
+                                        <img src={brand.logo} alt={brand.name} className="partner-logo-img" />
+                                    ) : (
+                                        <span className="brand-name">{brand.name}</span>
+                                    )}
+                                </div>
+                            ))}
+                        </motion.div>
                     </div>
                 </div>
             </div>

@@ -43,7 +43,7 @@ const Achievements = () => {
 
                     <TimelineItem
                         year="2022"
-                        title="Early Success"
+                        title="Early Success - SEVC 2022"
                         awards={[
                             "2nd Runner Up (SEVC)",
                             "Best Build Quality",
@@ -56,7 +56,7 @@ const Achievements = () => {
 
                     <TimelineItem
                         year="2023"
-                        title="Rising Momentum"
+                        title="Rising Momentum - SEVC 2023"
                         awards={[
                             "1st Runner Up (SEVC)",
                             "Maneuverability Award",
@@ -69,7 +69,7 @@ const Achievements = () => {
 
                     <TimelineItem
                         year="2024"
-                        title="Innovation Excellence"
+                        title="Excellence - SEVC 2024"
                         awards={[
                             "1st Runner Up (SEVC Dynamic)",
                             "Solar Endurance Award",
@@ -77,6 +77,19 @@ const Achievements = () => {
                             "Shutterbag Winner"
                         ]}
                         side="left"
+                        delay={0.3}
+                    />
+
+                    <TimelineItem
+                        year="2025"
+                        title="Resilience - SEVC 2025"
+                        awards={[
+                            "Optimal cost",
+                            "Winner in Acceleration",
+                            "Winner in Innovation",
+                            "Lightest vehicle",
+                        ]}
+                        side="right"
                         delay={0.3}
                     />
 

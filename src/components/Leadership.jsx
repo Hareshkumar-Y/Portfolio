@@ -2,16 +2,26 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import './Leadership.css';
 
+import CaptainImg from '../assets/captain.png';
+import ViceCaptainImg from '../assets/viceCaptain.png';
+import ManagerImg from '../assets/manager.png';
+import DynamicHeadImg from '../assets/dynamicHead.png';
+import StaticHeadImg from '../assets/staticHead.png';
+import BusinessHeadImg from '../assets/buissnessHead.png';
+import TreasurerImg from '../assets/treasurer.png';
+import EventHeadImg from '../assets/EventHead.png';
+import MarketingHeadImg from '../assets/marketingHead.png';
+
 const teamMembers = [
-    { name: "Sri Prenesh", role: "Captain", color: "#E53935" },
-    { name: "Raj Shri Varshini", role: "Vice Captain", color: "#43A047" },
-    { name: "Shenbagaraja", role: "Manager", color: "#1E88E5" },
-    { name: "Siddharth", role: "Dynamic Head", color: "#FB8C00" },
-    { name: "Sanjiv B", role: "Static Head", color: "#8E24AA" },
-    { name: "Sahaana", role: "Head of Business", color: "#00ACC1" },
-    { name: "Navith Sanjay", role: "Treasurer", color: "#546E7A" },
-    { name: "Nitin S", role: "Head of Event Division", color: "#FDD835" },
-    { name: "Owshick J", role: "Head of Marketing", color: "#D81B60" },
+    { name: "Sri Prenesh", role: "Captain", color: "#E53935", image: CaptainImg },
+    { name: "Raj Shri Varshini", role: "Vice Captain", color: "#43A047", image: ViceCaptainImg },
+    { name: "Shenbagaraja", role: "Manager", color: "#1E88E5", image: ManagerImg },
+    { name: "Siddharth", role: "Dynamic Head", color: "#FB8C00", image: DynamicHeadImg },
+    { name: "Sanjiv B", role: "Static Head", color: "#8E24AA", image: StaticHeadImg },
+    { name: "Sahaana", role: "Head of Business", color: "#00ACC1", image: BusinessHeadImg },
+    { name: "Navith Sanjay", role: "Treasurer", color: "#546E7A", image: TreasurerImg },
+    { name: "Nitin S", role: "Head of Event Division", color: "#FDD835", image: EventHeadImg },
+    { name: "Owshick J", role: "Head of Marketing", color: "#D81B60", image: MarketingHeadImg },
 ];
 
 const Leadership = () => {
@@ -40,7 +50,7 @@ const Leadership = () => {
                         >
                             <div className="member-image-wrapper">
                                 <img
-                                    src={`https://ui-avatars.com/api/?name=${member.name}&background=random&color=fff&size=128`}
+                                    src={member.image}
                                     alt={member.name}
                                     className="member-image"
                                 />
