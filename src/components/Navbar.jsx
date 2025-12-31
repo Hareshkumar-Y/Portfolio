@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './Navbar.css';
+import logo from '../assets/astra.png';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -46,7 +47,7 @@ const Navbar = () => {
                         className="logo-icon"
                     >
                         {/* Abstract Bird/Wing Logo Placeholder */}
-                        <img src="src/assets/astra.png" alt="logo" className="logo-icon" />
+                        <img src={logo} alt="logo" className="logo-icon" />
                     </motion.div>
                     <div className="logo-text">
                         <span className="team-name">ASTRA</span>

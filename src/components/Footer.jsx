@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaInstagram, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import ContactModal from './ContactModal';
 import './Footer.css';
 
 const Footer = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         <footer id="contact" className="footer">
             <div className="container footer-content">
                 <div className="footer-cta">
                     <h2>Ready to Step Into The Future?</h2>
-                    <a href="mailto:teamastra@gmail.com" className="btn btn-primary big-btn">Contact Us Today</a>
+                    <button onClick={() => setIsModalOpen(true)} className="btn btn-primary big-btn">Contact Us Today</button>
+                    <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
                 </div>
 
                 <div className="footer-grid">
