@@ -46,7 +46,7 @@ const Navbar = () => {
                         className="logo-icon"
                     >
                         {/* Abstract Bird/Wing Logo Placeholder */}
-                        <img src="src/assets/astra.jpeg" alt="logo" className="logo-icon" />
+                        <img src="src/assets/astra.png" alt="logo" className="logo-icon" />
                     </motion.div>
                     <div className="logo-text">
                         <span className="team-name">ASTRA</span>
