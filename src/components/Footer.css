@@ -35,12 +35,18 @@
     color: var(--color-secondary);
 }
 
-.contact-info p {
+.contact-link {
     display: flex;
     align-items: center;
     gap: 12px;
     margin-bottom: 16px;
     color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-link:hover {
+    color: var(--color-secondary);
 }
 
 .social-link {
