@@ -7,6 +7,7 @@ import Leadership from './components/Leadership';
 import TechSpecs from './components/TechSpecs';
 import Achievements from './components/Achievements';
 import Sponsorship from './components/Sponsorship';
+import Gallery from './components/Gallery';
 import Footer from './components/Footer';
 import Background from './components/Background';
 
@@ -23,6 +24,7 @@ function App() {
         <Achievements />
         <Leadership />
         <Sponsorship />
+        <Gallery />
       </main>
       <Footer />
     </div>

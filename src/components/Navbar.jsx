@@ -18,12 +18,12 @@ const Navbar = () => {
 
     const navLinks = [
         { name: "Introduction", href: "#intro" },
-        { name: "The Team", href: "#team" },
         { name: "About Us", href: "#about" },
-        { name: "Solar Car", href: "#hero" },
         { name: "Technical Overview", href: "#tech" },
         { name: "Achievements", href: "#achievements" },
+        { name: "The Team", href: "#team" },
         { name: "Sponsors", href: "#sponsors" },
+        { name: "Gallery", href: "#gallery" },
         { name: "Contact", href: "#contact" },
     ];
 

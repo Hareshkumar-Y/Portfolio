@@ -19,14 +19,15 @@ const Footer = () => {
                     <div className="contact-info">
                         <h3>Get In Touch</h3>
                         <p><FaPhone /> +91 63835 49287</p>
-                        <p><FaEnvelope /> teamastra@gmail.com</p>
+                        <p><FaEnvelope /> astraskcet@gmail.com</p>
+                        <p><FaEnvelope /> astrabussiness26@gmail.com</p>
                         <p><FaMapMarkerAlt /> Sri Krishna College of Engineering and Technology, Coimbatore - 641008</p>
                     </div>
 
                     <div className="social-links">
                         <h3>Follow Us</h3>
                         <a href="https://instagram.com/TEAM_ASTRA_SKCET" target="_blank" rel="noopener noreferrer" className="social-link">
-                            <FaInstagram /> @TEAM_ASTRA_SKCET
+                            <FaInstagram /> TEAM_ASTRA_SKCET
                         </a>
                     </div>
                 </div>

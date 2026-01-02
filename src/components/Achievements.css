@@ -113,7 +113,9 @@
 }
 
 .champion-card {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA000 100%);
+    background: linear-gradient(135deg, #FFD700 0%, #FFA000 50%, #FF5252 100%);
+    background-size: 200% 200%;
+    animation: subtleRedPulse 4s ease infinite;
     color: white;
     max-width: 600px;
     width: 100%;
@@ -213,6 +215,46 @@
     }
 
     .champion-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr
+    }
+
+    .champion-grid span {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .champion-card {
+        padding: 25px;
+        /* Reduced from 40px */
+    }
+
+    .champion-card .achievement-title {
+        font-size: 1.5rem;
+        /* Reduced from 2rem */
+    }
+
+    .champion-icon {
+        font-size: 2.5rem;
+        /* Reduced from 3rem */
+        margin-bottom: 15px;
+    }
+
+    .special-mention {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+}
+
+@keyframes subtleRedPulse {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
     }
 }

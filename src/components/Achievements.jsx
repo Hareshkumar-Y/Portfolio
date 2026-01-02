@@ -41,6 +41,24 @@ const Achievements = () => {
                 <div className="timeline">
                     <div className="timeline-line"></div>
 
+<TimelineItem
+                        year="2020"
+                        title="Beginnings - Hindustan Engineering College, CBE"
+                        awards={[
+                            "Build Quality Award"
+                        ]}
+                        side="left"
+                        delay={0.1}
+                    />
+                    <TimelineItem
+                        year="2022"
+                        title="Step up - SUVC 2022"
+                        awards={[
+                            "Innovation Award (SUVC)"
+                        ]}
+                        side="right"
+                        delay={0.1}
+                    />
                     <TimelineItem
                         year="2022"
                         title="Early Success - SEVC 2022"
@@ -69,14 +87,26 @@ const Achievements = () => {
 
                     <TimelineItem
                         year="2024"
+                        title="Stepping Stones - BSVC 2024"
+                        awards={[
+                            "Runner in Design Evaluation)",
+                            "Runner in Autocross"
+                        ]}
+                        side="left"
+                        delay={0.3}
+                    />
+
+                    <TimelineItem
+                        year="2024"
                         title="Excellence - SEVC 2024"
                         awards={[
                             "1st Runner Up (SEVC Dynamic)",
                             "Solar Endurance Award",
                             "Innovation Award",
-                            "Shutterbag Winner"
+                            "Shutterbag Winner",
+                            "Durability Award"
                         ]}
-                        side="left"
+                        side="right"
                         delay={0.3}
                     />
 
@@ -89,7 +119,7 @@ const Achievements = () => {
                             "Winner in Innovation",
                             "Lightest vehicle",
                         ]}
-                        side="right"
+                        side="left"
                         delay={0.3}
                     />
 

@@ -19,7 +19,7 @@ const About = () => {
                         <p className="about-text">
                             We function as a student-run technology startup within the academic ecosystem of Sri Krishna College of Engineering and Technology.
                             Our team consists of 45 dedicated members across three years of study, working under the expert guidance of our faculty mentor,
-                            <span className="highlight"> Dr. Gopinathan R.</span>
+                            <span className="highlight"> Dr. Gopinathan R</span>, industrial mentor <span className="highlight">Mr. Saktheeswaran</span> and <span className="highlight">all other alumini of TEAM ASTRA.</span>
                         </p>
                     </motion.div>
 
