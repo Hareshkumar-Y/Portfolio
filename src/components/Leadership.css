@@ -132,7 +132,7 @@
 
 .mentor-image-wrapper {
     flex: 0 0 250px;
-    height: 250px;
+    height: 280px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow-md);

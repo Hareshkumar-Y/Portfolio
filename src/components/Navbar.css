@@ -30,31 +30,25 @@
 }
 
 .logo-icon {
-    width: 120px;
     height: 50px;
-    object-fit: cover;
-    /* border-radius: 50%; */
+    width: auto;
+    /* Allow width to adjust based on aspect ratio */
+    max-width: 120px;
+    /* Cap width */
+    object-fit: contain;
+    /* Ensure full logo is visible */
 }
 
-.logo-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.team-name {
-    font-family: var(--font-heading);
-    font-weight: 800;
-    font-size: 1.5rem;
+.logo-separator {
+    font-size: 2rem;
+    font-weight: 300;
     color: var(--color-text);
-    line-height: 1;
+    margin: 0 5px;
+    padding-bottom: 5px;
+    /* Slight adjustment for visual alignment */
 }
 
-.motto {
-    font-size: 0.75rem;
-    color: var(--color-secondary);
-    letter-spacing: 0.5px;
-    font-weight: 500;
-}
+/* Removed logo-text, team-name, motto as they are no longer used */
 
 .desktop-menu {
     display: flex;

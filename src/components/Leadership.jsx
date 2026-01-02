@@ -11,6 +11,7 @@ import BusinessHeadImg from '../assets/buissnessHead.png';
 import TreasurerImg from '../assets/treasurer.png';
 import EventHeadImg from '../assets/EventHead.png';
 import MarketingHeadImg from '../assets/marketingHead.png';
+import MentorImg from '../assets/mentor.png';
 
 const teamMembers = [
     { name: "Sri Prenesh", role: "Captain", collegeRole: "Third Year, Mechatronics Engineering", color: "#E53935", image: CaptainImg, quote: "Leading with vision, driving with passion." },
@@ -40,13 +41,13 @@ const Leadership = () => {
                 <div className="mentor-showcase">
                     <div className="mentor-image-wrapper">
                         <img
-                            src="https://placehold.co/400x400/263238/FFF?text=Mentor"
+                            src={MentorImg}
                             alt="Team Mentor"
                             className="mentor-image"
                         />
                     </div>
                     <div className="mentor-content">
-                        <h3 className="mentor-name">Dr. A. Mentor Name</h3>
+                        <h3 className="mentor-name">Dr. Gopinathan R</h3>
                         <p className="mentor-role">MENTOR</p>
                         <p className="mentor-college-role">Assistant Professor, Mechatronics Department</p>
                         <blockquote className="mentor-quote">

@@ -17,9 +17,9 @@ const About = () => {
                         <h2 className="section-title">About Team ASTRA</h2>
                         <h3 className="about-subtitle">Multidisciplinary Engineering Startup</h3>
                         <p className="about-text">
-                            We function as a student-run technology startup within the academic ecosystem of Sri Krishna College of Engineering and Technology.
+                            We function as a student-run technology startup within the academic ecosystem of Mechatronics Engineering, Sri Krishna College of Engineering and Technology.
                             Our team consists of 45 dedicated members across three years of study, working under the expert guidance of our faculty mentor,
-                            <span className="highlight"> Dr. Gopinathan R</span>, industrial mentor <span className="highlight">Mr. Saktheeswaran</span> and <span className="highlight">all other alumini of TEAM ASTRA.</span>
+                            <span className="highlight"> Dr. Gopinathan R</span> from <span className="highlight">Mechatronics Department</span> of <span className="highlight">Sri Krishna College of Engineering and Technology.</span>
                         </p>
                     </motion.div>
 

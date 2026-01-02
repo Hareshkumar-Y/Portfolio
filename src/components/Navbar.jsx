@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './Navbar.css';
 import logo from '../assets/astra.png';
+import skiLogo from '../assets/skiLogo.png';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -40,19 +41,9 @@ const Navbar = () => {
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container navbar-content">
                 <a href="#hero" className="logo" onClick={(e) => scrollToSection(e, '#hero')}>
-                    <motion.div
-                        initial={{ y: 0 }}
-                        animate={{ y: [0, -5, 0] }}
-                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                        className="logo-icon"
-                    >
-                        {/* Abstract Bird/Wing Logo Placeholder */}
-                        <img src={logo} alt="logo" className="logo-icon" />
-                    </motion.div>
-                    <div className="logo-text">
-                        <span className="team-name">ASTRA</span>
-                        <span className="motto">Per Aspera Ad Astra</span>
-                    </div>
+                    <img src={logo} alt="Astra Logo" className="logo-icon" />
+                    <span className="logo-separator">|</span>
+                    <img src={skiLogo} alt="SKI Logo" className="logo-icon" />
                 </a>
 
                 <div className="desktop-menu">
