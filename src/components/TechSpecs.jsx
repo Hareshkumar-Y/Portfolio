@@ -53,7 +53,7 @@ const TechSpecs = () => {
                         icon={<FaBatteryFull />}
                         title="Energy Storage"
                         specs={[
-                            "60V 100Ah (6 kWh) NMC Battery",
+                            "60V 100Ah NMC Battery",
                             "IP67 Rated Battery Pack",
                             "IP67 Rated BMS Protection"
                         ]}
