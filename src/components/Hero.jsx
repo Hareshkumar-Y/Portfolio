@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import CarImage from '../assets/astra_solar_car.png';
+import CarImage from '../assets/Astra.jpeg';
 import './Hero.css';
 
 const Hero = () => {

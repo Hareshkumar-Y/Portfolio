@@ -123,6 +123,20 @@ const Achievements = () => {
                         delay={0.3}
                     />
 
+                    <TimelineItem
+                        year="2025"
+                        title="Overall BSVC 2025 Champions"
+                        awards={[
+                            "Optimal cost","Best Design Award",
+                            "Winner in Acceleration",
+                            "Winner in Autocross",
+                            "Winner in Skidpad",
+                            "Endurance Winner"
+                        ]}
+                        side="right"
+                        delay={0.3}
+                    />
+
                     <motion.div
                         className="timeline-item center highlight-year"
                         initial={{ opacity: 0, scale: 0.8 }}
@@ -132,17 +146,15 @@ const Achievements = () => {
                     >
                         <div className="timeline-content champion-card">
                             <div className="champion-icon"><FaTrophy /></div>
-                            <div className="year-badge big">2025</div>
-                            <h3 className="achievement-title big">Overall BSVC Champions</h3>
+                            <div className="year-badge big">2026</div>
+                            <h3 className="achievement-title big">Upgrades - SEVC 2026</h3>
                             <div className="champion-grid">
-                                <span><FaMedal className="icon-sm" /> Design</span>
-                                <span><FaMedal className="icon-sm" /> Cost</span>
-                                <span><FaMedal className="icon-sm" /> Acceleration</span>
-                                <span><FaMedal className="icon-sm" /> Autocross</span>
-                                <span><FaMedal className="icon-sm" /> Skidpad</span>
-                                <span><FaMedal className="icon-sm" /> Endurance</span>
+                                <span><FaMedal className="icon-sm" />Lightest Vehicle Award</span>
+                                <span><FaMedal className="icon-sm" />Brakes and Acceleration Award</span>
+                                <span><FaMedal className="icon-sm" />Innovation Award</span>
+                                <span><FaMedal className="icon-sm" />Rush in dusk Winner</span>
                             </div>
-                            <p className="special-mention"><FaStar /> "Lightest Vehicle" Award</p>
+                            <p className="special-mention"><FaStar /> "Motor man Award (Sanjiv B)" Award</p>
                         </div>
                     </motion.div>
                 </div>

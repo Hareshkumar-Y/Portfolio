@@ -115,6 +115,7 @@
 .car-image {
     width: 80%;
     height: auto;
+    border-radius: 10%;
     /* border: 10px solid var(--color-text); */
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
 }
@@ -199,6 +200,7 @@
         width: 80%;
         /* Smaller car */
         max-width: 400px;
+        border-radius: 10%;
     }
 
     /* Hide stat cards on mobile to declutter */
