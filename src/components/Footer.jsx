@@ -18,8 +18,8 @@ const Footer = () => {
                 <div className="footer-grid">
                     <div className="contact-info">
                         <h3>Get In Touch</h3>
-                        <a href="tel:+919003567752" className="contact-link"><FaPhone /> +91 90035 67752</a>
-                        <a href="tel:+916383549287" className="contact-link"><FaPhone /> +91 63835 49287</a>
+                        <a href="tel:+919585521365" className="contact-link"><FaPhone /> +91 95855 21365</a>
+                        <a href="tel:+918124180100" className="contact-link"><FaPhone /> +91 81241 80100</a>
                         <a href="mailto:astraskcet@gmail.com" className="contact-link"><FaEnvelope /> astraskcet@gmail.com</a>
                         <a href="mailto:astrabussiness26@gmail.com" className="contact-link"><FaEnvelope /> astrabussiness26@gmail.com</a>
                         <a href="https://maps.google.com/?q=Sri+Krishna+College+of+Engineering+and+Technology,+Coimbatore" target="_blank" rel="noopener noreferrer" className="contact-link"><FaMapMarkerAlt /> Sri Krishna College of Engineering and Technology, Coimbatore - 641008</a>
@@ -34,7 +34,7 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>&copy; 2025 Team ASTRA. Per Aspera Ad Astra.</p>
+                    <p>&copy; 2026 Team ASTRA. Per Aspera Ad Astra.</p>
                 </div>
             </div>
         </footer>
