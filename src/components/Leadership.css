@@ -1,6 +1,6 @@
 .team-section {
     padding: 100px 0;
-    background-color: var(--color-surface);
+    background-color: var(--color-surface, #f5f5f5);
 }
 
 .text-center {
@@ -9,109 +9,97 @@
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(100px, 1fr));
-    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
     margin-top: 50px;
 }
 
-.team-card {
+/* Style the member cards to match the mentor showcase box style */
+.team-card,
+.member-card {
     background: white;
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: var(--shadow-sm);
-    text-align: center;
-    transition: all 0.3s ease;
-    border: 1px solid transparent;
+    padding: 40px 30px;
+    border-radius: 24px;
+    /* Matches mentor-showcase border-radius */
+    box-shadow: var(--shadow-lg);
+    /* Matches mentor-showcase box-shadow */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Matches mentor-showcase border */
+    text-align: left;
+    /* Left aligned like mentor-content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.team-card:hover {
-    box-shadow: var(--shadow-lg);
-    border-color: rgba(0, 0, 0, 0.05);
+.team-card:hover,
+.member-card:hover {
+    transform: translateY(-5px);
+    /* Matches mentor-showcase hover lift */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .member-image-wrapper {
-    width: 100px;
-    height: 100px;
-    border-radius: 10%;
-    margin: 0 auto 20px;
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    /* Matches mentor-image-wrapper border-radius */
+    margin: 0 0 20px 0;
     overflow: hidden;
-    border: 3px solid white;
     box-shadow: var(--shadow-md);
 }
 
 .member-image {
-    /* margin-top: 5px; */
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    display: block;
+}
+
+.member-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .member-name {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     font-weight: 700;
-    margin-bottom: 2px;
-    color: var(--color-text);
-}
-
-.member-college-role {
-    font-size: 0.85rem;
-    color: var(--color-text-light);
-    margin-bottom: 8px;
-    font-weight: 500;
+    margin-bottom: 4px;
+    color: var(--color-text, #1a1a1a);
 }
 
 .member-role {
     font-size: 0.95rem;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.member-college-role {
+    font-size: 0.85rem;
+    color: var(--color-text-light, #424242);
+    margin-bottom: 15px;
+    font-weight: 500;
+    opacity: 0.85;
 }
 
 .member-quote {
     font-size: 0.9rem;
     font-style: italic;
-    color: var(--color-text-light);
-    line-height: 1.4;
-    margin-top: 10px;
+    color: var(--color-text-light, #424242);
+    line-height: 1.5;
+    margin-top: auto;
+    /* Push quotes to bottom */
+    border-left: 4px solid var(--color-secondary, #D32F2F);
+    /* Matches mentor-quote border-left */
+    padding-left: 15px;
+    margin-left: 0;
 }
 
-@media (max-width: 768px) {
-    .team-section {
-        padding: 40px 0;
-        /* Compact padding */
-    }
-
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 columns on mobile */
-        gap: 15px;
-        /* Tighter gap */
-        margin-top: 30px;
-    }
-
-    .team-card {
-        padding: 15px;
-        /* Reduced card padding */
-    }
-
-    .member-image-wrapper {
-        width: 80px;
-        /* Smaller image */
-        height: 80px;
-        margin-bottom: 10px;
-    }
-
-    .member-name {
-        font-size: 1rem;
-    }
-
-    .member-role {
-        font-size: 0.8rem;
-    }
-}
-
-/* Mentor Showcase */
+/* Mentor Showcase Styles */
 .mentor-showcase {
     display: flex;
     align-items: center;
@@ -142,6 +130,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .mentor-content {
@@ -151,13 +140,14 @@
 
 .mentor-name {
     font-size: 2rem;
-    color: var(--color-text);
+    color: var(--color-text, #1a1a1a);
     margin-bottom: 10px;
 }
 
 .mentor-role {
     font-size: 1.1rem;
-    color: var(--color-primary);
+    color: var(--color-secondary, #D32F2F);
+    /* Fixed invisible white text */
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -166,7 +156,7 @@
 
 .mentor-college-role {
     font-size: 1rem;
-    color: var(--color-text-light);
+    color: var(--color-text-light, #424242);
     margin-bottom: 25px;
     font-weight: 500;
 }
@@ -174,13 +164,42 @@
 .mentor-quote {
     font-size: 1.2rem;
     font-style: italic;
-    color: var(--color-text-light);
-    border-left: 4px solid var(--color-secondary);
+    color: var(--color-text-light, #424242);
+    border-left: 4px solid var(--color-secondary, #D32F2F);
     padding-left: 20px;
     line-height: 1.6;
+    margin: 0;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
+    .team-section {
+        padding: 40px 0;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .team-card,
+    .member-card {
+        padding: 20px 15px;
+    }
+
+    .member-image-wrapper {
+        height: 150px;
+    }
+
+    .member-name {
+        font-size: 1.1rem;
+    }
+
+    .member-role {
+        font-size: 0.85rem;
+    }
+
     .mentor-showcase {
         flex-direction: column;
         text-align: center;
@@ -205,8 +224,7 @@
 
 @media (max-width: 480px) {
     .team-grid {
-        grid-template-columns: 1fr 1fr;
-        /* Keep 2 cols even on small screens */
-        gap: 10px;
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 }

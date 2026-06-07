@@ -74,7 +74,7 @@ export const teamMembers = [
     {
         name: "Rishi Karthick",
         role: "Design head",
-        collegeRole: "Third Year, Mechatronics Engineering",
+        collegeRole: "Second Year, Mechatronics Engineering",
         color: "#FDD835",
         image: DesignHeadImg,
         quote: "Blending form and function to sculpt the future of aerodynamic and aesthetic design."
@@ -82,7 +82,7 @@ export const teamMembers = [
     {
         name: "Yugesh Gobi",
         role: "Suspension head",
-        collegeRole: "Third Year, Mechatronics Engineering",
+        collegeRole: "Second Year, Mechatronics Engineering",
         color: "#00ACC1",
         image: SuspensionHeadImg,
         quote: "Perfecting the contact patch, smoothing the ride, and keeping us glued to the track."
@@ -98,7 +98,7 @@ export const teamMembers = [
     {
         name: "Sanjeevi",
         role: "Transmission head",
-        collegeRole: "Third Year, Mechatronics Engineering",
+        collegeRole: "Second Year, Mechatronics Engineering",
         color: "#FDD835",
         image: TransmissionHeadImg,
         quote: "Optimizing power transfer to convert every watt of energy into pure acceleration."
@@ -130,7 +130,7 @@ export const teamMembers = [
     {
         name: "Dinesh",
         role: "Innovation head",
-        collegeRole: "Third Year, Mechatronics Engineering",
+        collegeRole: "Second Year, Mechatronics Engineering",
         color: "#FDD835",
         image: InnovationHeadImg,
         quote: "Reimagining what's possible, pushing boundaries, and keeping Astra ahead of the curve."

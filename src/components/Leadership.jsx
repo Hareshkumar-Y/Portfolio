@@ -7,7 +7,7 @@ const defaultAvatar = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/200
 
 const Leadership = () => {
     return (
-        <section id="team" className="leadership-section">
+        <section id="team" className="team-section">
             <div className="container">
                 <motion.h2
                     className="section-title text-center"
@@ -57,12 +57,14 @@ const Leadership = () => {
                                     loading="lazy"
                                 />
                             </div>
-                            <h3 className="member-name">{member.name}</h3>
-                            <p className="member-college-role">{member.collegeRole}</p>
-                            <span className="member-role" style={{ color: member.color }}>{member.role.toUpperCase()}</span>
-                            <blockquote className="member-quote">
-                                "{member.quote}"
-                            </blockquote>
+                            <div className="member-content">
+                                <h3 className="member-name">{member.name}</h3>
+                                <p className="member-role" style={{ color: member.color }}>{member.role.toUpperCase()}</p>
+                                <p className="member-college-role">{member.collegeRole}</p>
+                                <blockquote className="member-quote">
+                                    "{member.quote}"
+                                </blockquote>
+                            </div>
                         </motion.div>
                     ))}
                 </div>
