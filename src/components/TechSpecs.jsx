@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaBolt, FaBatteryFull, FaTachometerAlt, FaShieldAlt, FaDesktop, FaEye } from 'react-icons/fa';
+import { techSpecs } from '../data/techSpecsData';
 import './TechSpecs.css';
 
 const TechCard = ({ icon, title, specs, delay }) => {
@@ -39,57 +39,15 @@ const TechSpecs = () => {
                 </motion.div>
 
                 <div className="tech-grid">
-                    <TechCard
-                        icon={<FaBolt />}
-                        title="Powertrain"
-                        specs={[
-                            "4 kW HSRM Powertrain",
-                            "High efficiency motor controller",
-                            "Optimized for solar application"
-                        ]}
-                        delay={0.1}
-                    />
-                    <TechCard
-                        icon={<FaBatteryFull />}
-                        title="Energy Storage"
-                        specs={[
-                            "60V 100Ah NMC Battery",
-                            "IP67 Rated Battery Pack",
-                            "IP67 Rated BMS Protection"
-                        ]}
-                        delay={0.2}
-                    />
-                    <TechCard
-                        icon={<FaTachometerAlt />}
-                        title="Performance"
-                        specs={[
-                            "3 Drive Modes (Ride modes)",
-                            "Eco / City / Sport optimized",
-                            "Responsive throttle mapping"
-                        ]}
-                        delay={0.3}
-                    />
-                    <TechCard
-                        icon={<FaDesktop />}
-                        title="Smart Dash"
-                        specs={[
-                            "ASTRA ASEV2503 Dashboard",
-                            "7\" HMI Touch Display",
-                            "Fully customizable interface"
-                        ]}
-                        delay={0.4}
-                    />
-                    <TechCard
-                        icon={<FaEye />}
-                        title="Safety & Vision"
-                        specs={[
-                            "Optical Ultrawave Technology",
-                            "Blind Spot Detection",
-                            "Rear Collision Warnings",
-                            "Overtake Alerts"
-                        ]}
-                        delay={0.5}
-                    />
+                    {techSpecs.map((tech, index) => (
+                        <TechCard
+                            key={index}
+                            icon={tech.icon}
+                            title={tech.title}
+                            specs={tech.specs}
+                            delay={tech.delay}
+                        />
+                    ))}
                 </div>
             </div>
         </section>
@@ -97,3 +55,4 @@ const TechSpecs = () => {
 };
 
 export default TechSpecs;
+

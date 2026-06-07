@@ -22,7 +22,7 @@ const Hero = () => {
                         transition={{ delay: 0.2 }}
                         className="hero-year"
                     >
-                        2025-2026
+                        2026-2027
                     </motion.div>
 
                     <motion.h1

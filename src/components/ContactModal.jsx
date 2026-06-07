@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaTimes, FaPaperPlane } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
@@ -8,6 +8,17 @@ const ContactModal = ({ isOpen, onClose }) => {
     const form = useRef();
     const [status, setStatus] = useState('idle'); // idle, sending, success, error
     const [errorMessage, setErrorMessage] = useState(''); // Store specific error detail
+
+    useEffect(() => {
+        if (!isOpen) return;
+        const handleKeyDown = (e) => {
+            if (e.key === 'Escape') {
+                onClose();
+            }
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [isOpen, onClose]);
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -44,6 +55,9 @@ const ContactModal = ({ isOpen, onClose }) => {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     onClick={onClose}
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="contact-modal-title"
                 >
                     <motion.div
                         className="modal-content"
@@ -52,11 +66,11 @@ const ContactModal = ({ isOpen, onClose }) => {
                         exit={{ scale: 0.8, opacity: 0 }}
                         onClick={(e) => e.stopPropagation()}
                     >
-                        <button className="close-btn" onClick={onClose}>
+                        <button className="close-btn" onClick={onClose} aria-label="Close modal">
                             <FaTimes />
                         </button>
 
-                        <h2>Connect with Team ASTRA</h2>
+                        <h2 id="contact-modal-title">Connect with Team ASTRA</h2>
                         <p>Have questions or want to collaborate? Drop us a message!</p>
 
                         <form ref={form} onSubmit={sendEmail} className="contact-form">
@@ -94,3 +108,4 @@ const ContactModal = ({ isOpen, onClose }) => {
 };
 
 export default ContactModal;
+

@@ -1,21 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { carouselSlides, achievements, insideAstra, pitPeek } from '../data/galleryData';
 import './Gallery.css';
-
-// Import images
-import hero1 from '../assets/hero1.jpg';
-import hero2 from '../assets/hero2.jpg';
-import hero3 from '../assets/hero3.jpg';
-import trophy1 from '../assets/trophy1.jpg';
-import trophy2 from '../assets/trophy2.jpg';
-import trophy3 from '../assets/trophy3.jpg';
-import inside1 from '../assets/inside1.jpeg';
-import inside2 from '../assets/inside2.jpeg';
-import inside3 from '../assets/inside3.jpeg';
-import pit1 from '../assets/pit_1.jpg';
-import pit2 from '../assets/pit_2.jpg';
-import pit3 from '../assets/pit_3.jpg';
 
 const HeroCarousel = ({ slides }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -93,7 +80,7 @@ const GallerySection = ({ title, items, delayOffset = 0 }) => (
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: delayOffset + (index * 0.1) }}
                 >
-                    <img src={item.src} alt={item.caption} className="gallery-image" />
+                    <img src={item.src} alt={item.caption} className="gallery-image" loading="lazy" />
                     <div className="gallery-overlay">
                         <p className="gallery-caption">{item.caption}</p>
                     </div>
@@ -104,47 +91,6 @@ const GallerySection = ({ title, items, delayOffset = 0 }) => (
 );
 
 const Gallery = () => {
-    // Carousel Data - High Impact Images
-    const carouselSlides = [
-        {
-            id: 1,
-            src: hero1,
-            caption: 'The team',
-            description: 'Team Astra securing 1st place. Moment that made team anxious.'
-        },
-        {
-            id: 2,
-            src: hero2,
-            caption: 'The twins of MCT, SKCET',
-            description: 'One for speed on tracks, another for precision in every move.'
-        },
-        {
-            id: 3,
-            src: hero3,
-            caption: 'Unity - The power of team',
-            description: 'The power of unity in every move.'
-        },
-    ];
-
-    // Categorized Data
-    const achievements = [
-        { id: 'a1', src: trophy1, caption: 'First hand-on' },
-        { id: 'a2', src: trophy2, caption: 'It rained trophies' },
-        { id: 'a3', src: trophy3, caption: 'The overall winner' },
-    ];
-
-    const insideAstra = [
-        { id: 'i1', src: inside1, caption: 'The Workshop' },
-        { id: 'i2', src: inside2, caption: 'Our car Our work' },
-        { id: 'i3', src: inside3, caption: 'The skeleton' },
-    ];
-
-    const pitPeek = [
-        { id: 'p1', src: pit1, caption: 'Team Spirit' },
-        { id: 'p2', src: pit2, caption: 'Pit Stop Action' },
-        { id: 'p3', src: pit3, caption: 'Race Day Vibe' },
-    ];
-
     return (
         <section id="gallery" className="gallery-section">
             <div className="container">
@@ -169,3 +115,4 @@ const Gallery = () => {
 };
 
 export default Gallery;
+

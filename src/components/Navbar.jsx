@@ -22,6 +22,7 @@ const Navbar = () => {
         { name: "About Us", href: "#about" },
         { name: "Technical Overview", href: "#tech" },
         { name: "Achievements", href: "#achievements" },
+        { name: "News", href: "#news" },
         { name: "The Team", href: "#team" },
         { name: "Sponsors", href: "#sponsors" },
         { name: "Gallery", href: "#gallery" },
@@ -59,7 +60,20 @@ const Navbar = () => {
                     ))}
                 </div>
 
-                <div className="mobile-toggle" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+                <div
+                    className="mobile-toggle"
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Toggle navigation menu"
+                    aria-expanded={mobileMenuOpen}
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            setMobileMenuOpen(!mobileMenuOpen);
+                        }
+                    }}
+                >
                     {mobileMenuOpen ? <FaTimes /> : <FaBars />}
                 </div>
 

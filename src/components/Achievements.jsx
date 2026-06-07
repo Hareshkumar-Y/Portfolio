@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaTrophy, FaMedal, FaStar } from 'react-icons/fa';
+import { timelineItems, championAchievement } from '../data/achievementsData';
 import './Achievements.css';
 
 const TimelineItem = ({ year, title, awards, side, delay }) => {
@@ -41,101 +42,16 @@ const Achievements = () => {
                 <div className="timeline">
                     <div className="timeline-line"></div>
 
-<TimelineItem
-                        year="2020"
-                        title="Beginnings - Hindustan Engineering College, CBE"
-                        awards={[
-                            "Build Quality Award"
-                        ]}
-                        side="left"
-                        delay={0.1}
-                    />
-                    <TimelineItem
-                        year="2022"
-                        title="Step up - SUVC 2022"
-                        awards={[
-                            "Innovation Award (SUVC)"
-                        ]}
-                        side="right"
-                        delay={0.1}
-                    />
-                    <TimelineItem
-                        year="2022"
-                        title="Early Success - SEVC 2022"
-                        awards={[
-                            "2nd Runner Up (SEVC)",
-                            "Best Build Quality",
-                            "Best Captain (Arvind M)",
-                            "Virtual Round Winner"
-                        ]}
-                        side="left"
-                        delay={0.1}
-                    />
-
-                    <TimelineItem
-                        year="2023"
-                        title="Rising Momentum - SEVC 2023"
-                        awards={[
-                            "1st Runner Up (SEVC)",
-                            "Maneuverability Award",
-                            "Hovering & Drag Award",
-                            "Shutterbag Winner"
-                        ]}
-                        side="right"
-                        delay={0.2}
-                    />
-
-                    <TimelineItem
-                        year="2024"
-                        title="Stepping Stones - BSVC 2024"
-                        awards={[
-                            "Runner in Design Evaluation)",
-                            "Runner in Autocross"
-                        ]}
-                        side="left"
-                        delay={0.3}
-                    />
-
-                    <TimelineItem
-                        year="2024"
-                        title="Excellence - SEVC 2024"
-                        awards={[
-                            "1st Runner Up (SEVC Dynamic)",
-                            "Solar Endurance Award",
-                            "Innovation Award",
-                            "Shutterbag Winner",
-                            "Durability Award"
-                        ]}
-                        side="right"
-                        delay={0.3}
-                    />
-
-                    <TimelineItem
-                        year="2025"
-                        title="Resilience - SEVC 2025"
-                        awards={[
-                            "Optimal cost",
-                            "Winner in Acceleration",
-                            "Winner in Innovation",
-                            "Lightest vehicle",
-                        ]}
-                        side="left"
-                        delay={0.3}
-                    />
-
-                    <TimelineItem
-                        year="2025"
-                        title="Overall BSVC 2025 Champions"
-                        awards={[
-                            "Optimal cost","Best Design Award",
-                            "Winner in Acceleration",
-                            "Winner in Autocross",
-                            "Winner in Skidpad",
-                            "Endurance Winner"
-                        ]}
-                        side="right"
-                        delay={0.3}
-                    />
+                    {timelineItems.map((item, index) => (
+                        <TimelineItem
+                            key={index}
+                            year={item.year}
+                            title={item.title}
+                            awards={item.awards}
+                            side={item.side}
+                            delay={item.delay}
+                        />
+                    ))}
 
                     <motion.div
                         className="timeline-item center highlight-year"
@@ -146,15 +62,19 @@ const Achievements = () => {
                     >
                         <div className="timeline-content champion-card">
                             <div className="champion-icon"><FaTrophy /></div>
-                            <div className="year-badge big">2026</div>
-                            <h3 className="achievement-title big">Upgrades - SEVC 2026</h3>
+                            <div className="year-badge big">{championAchievement.year}</div>
+                            <h3 className="achievement-title big">{championAchievement.title}</h3>
                             <div className="champion-grid">
-                                <span><FaMedal className="icon-sm" />Lightest Vehicle Award</span>
-                                <span><FaMedal className="icon-sm" />Brakes and Acceleration Award</span>
-                                <span><FaMedal className="icon-sm" />Innovation Award</span>
-                                <span><FaMedal className="icon-sm" />Rush in dusk Winner</span>
+                                {championAchievement.awards.map((award, idx) => (
+                                    <span key={idx}>
+                                        <FaMedal className="icon-sm" />
+                                        {award}
+                                    </span>
+                                ))}
                             </div>
-                            <p className="special-mention"><FaStar /> "Motor man Award (Sanjiv B)" Award</p>
+                            <p className="special-mention">
+                                <FaStar /> {championAchievement.specialMention}
+                            </p>
                         </div>
                     </motion.div>
                 </div>
@@ -163,4 +83,4 @@ const Achievements = () => {
     );
 };
 
-export default Achievements;
+export default Achievements;

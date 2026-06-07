@@ -31,6 +31,20 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+section[id],
+#intro,
+#about,
+#tech,
+#achievements,
+#news,
+#team,
+#sponsors,
+#gallery,
+#contact {
+  scroll-margin-top: 90px;
 }
 
 body {
