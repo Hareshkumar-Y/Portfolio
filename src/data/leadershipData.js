@@ -65,7 +65,7 @@ export const teamMembers = [
     },
     {
         name: "Niteesh",
-        role: "Public Representation officer",
+        role: "Public Representative officer",
         collegeRole: "Third Year, Mechatronics Engineering",
         color: "#FDD835",
         image: PublicRepresentationOfficerImg,
