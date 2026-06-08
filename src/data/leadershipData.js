@@ -3,7 +3,7 @@ import ViceCaptainImg from '../assets/viceCaptain.png';
 import ManagerImg from '../assets/manager.png';
 import DynamicCaptainImg from '../assets/dynamicCaptain.png';
 import StaticCaptainImg from '../assets/staticCaptain.png';
-import PublicRepresentationOfficerImg from '../assets/publicRepresentationOfficer.png';
+import PublicRepresentationOfficerImg from '../assets/PRO.png';
 import DesignHeadImg from '../assets/designHead.png';
 import SuspensionHeadImg from '../assets/suspensionHead.png';
 import SteeringHeadImg from '../assets/steeringHead.png';
