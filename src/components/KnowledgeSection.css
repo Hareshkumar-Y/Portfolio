@@ -1,0 +1,126 @@
+.knowledge-section {
+  padding: 100px 0;
+  background-color: var(--color-surface);
+}
+
+.knowledge-header {
+  margin-bottom: 50px;
+}
+
+.knowledge-subtitle {
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--color-text-light);
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.knowledge-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 30px;
+}
+
+.knowledge-card {
+  background: white;
+  padding: 40px 36px;
+  border-radius: 24px;
+  box-shadow: var(--shadow-sm);
+  border-top: 5px solid transparent;
+  transition: all 0.35s ease;
+}
+
+.knowledge-card:hover {
+  border-top-color: var(--color-secondary);
+  transform: translateY(-5px);
+}
+
+.knowledge-card-title {
+  margin-bottom: 28px;
+  font-size: 1.45rem;
+  color: var(--color-text);
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+.skills-list li:last-child {
+  border-bottom: none;
+}
+
+.skill-dot {
+  width: 10px;
+  min-width: 10px;
+  height: 10px;
+  margin-top: 6px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+}
+
+.software-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 18px;
+}
+
+.software-chip {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: #fcfcfc;
+  border: 1px solid rgba(211, 47, 47, 0.08);
+}
+
+.software-logo {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: var(--color-secondary);
+  color: white;
+  flex-shrink: 0;
+}
+
+.software-logo svg {
+  width: 24px;
+  height: 24px;
+}
+
+.software-name {
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+@media (max-width: 992px) {
+  .knowledge-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .knowledge-card {
+    padding: 28px 22px;
+  }
+
+  .software-grid {
+    grid-template-columns: 1fr;
+  }
+}

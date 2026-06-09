@@ -21,6 +21,7 @@ const Navbar = () => {
         { name: "Introduction", href: "#intro" },
         { name: "About Us", href: "#about" },
         { name: "Technical Overview", href: "#tech" },
+        { name: "Knowledge by ASTRA", href: "#knowledge" },
         { name: "Achievements", href: "#achievements" },
         { name: "News", href: "#news" },
         { name: "The Team", href: "#team" },
