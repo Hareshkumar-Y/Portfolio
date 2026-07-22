@@ -15,36 +15,46 @@ const HeroCarousel = ({ slides }) => {
     }, [slides.length]);
 
     const nextSlide = () => {
-        setCurrentIndex((prev) => (prev + 1) % slides.length);
+        setCurrentIndex((prev) => (prev + 1 + slides.length) % slides.length);
     };
 
     const prevSlide = () => {
         setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
     };
 
+    const getSlideAt = (offset) => slides[(currentIndex + offset + slides.length) % slides.length];
+    const visibleSlides = [getSlideAt(-1), getSlideAt(0), getSlideAt(1)];
+
     return (
         <div className="hero-carousel-container">
-            <div className="hero-carousel-track">
-                <AnimatePresence mode='wait'>
-                    <motion.div
-                        key={currentIndex}
-                        className="hero-carousel-slide"
-                        initial={{ opacity: 0, x: 100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -100 }}
-                        transition={{ duration: 0.28, ease: "easeInOut" }}
-                    >
-                        <img src={slides[currentIndex].src} alt={slides[currentIndex].caption} className="hero-carousel-image" />
-                        <div className="hero-carousel-overlay">
-                            <h3>{slides[currentIndex].caption}</h3>
-                            <p>{slides[currentIndex].description}</p>
-                        </div>
-                    </motion.div>
-                </AnimatePresence>
+            <div className="hero-carousel-cards">
+                {visibleSlides.map((slide, index) => {
+                    const position = index === 1 ? 'active' : index === 0 ? 'previous' : 'next';
+                    return (
+                        <motion.div
+                            key={slide.id + position}
+                            className={`hero-carousel-card ${position}`}
+                            style={{
+                                '--card-width': slide.frameWidth || '340px',
+                                '--card-height': slide.frameHeight || '520px',
+                                '--card-radius': slide.frameRadius || '34px',
+                            }}
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.28, ease: 'easeOut' }}
+                        >
+                            <img src={slide.src} alt={slide.caption} className="hero-carousel-image" />
+                            <div className="hero-carousel-card-overlay">
+                                <h3>{slide.caption}</h3>
+                                {position === 'active' && <p>{slide.description}</p>}
+                            </div>
+                        </motion.div>
+                    );
+                })}
             </div>
 
-            <button className="carousel-nav-btn prev" onClick={prevSlide}><FaChevronLeft /></button>
-            <button className="carousel-nav-btn next" onClick={nextSlide}><FaChevronRight /></button>
+            <button className="carousel-nav-btn prev" onClick={prevSlide} aria-label="Previous slide"><FaChevronLeft /></button>
+            <button className="carousel-nav-btn next" onClick={nextSlide} aria-label="Next slide"><FaChevronRight /></button>
 
             <div className="carousel-indicators">
                 {slides.map((_, index) => (

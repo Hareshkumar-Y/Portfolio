@@ -23,37 +23,61 @@ export const carouselSlides = [
         id: 1,
         src: hero1,
         caption: 'The team',
-        description: 'Team Astra securing 1st place. Moment that made team anxious.'
+        description: 'Team Astra securing 1st place. Moment that made team anxious.',
+        dim: 0.55,
+        frameWidth: '380px',
+        frameHeight: '520px',
+        frameRadius: '38px'
     },
     {
         id: 2,
         src: hero2,
         caption: 'The twins of MCT, SKCET',
-        description: 'One for speed on tracks, another for precision in every move.'
+        description: 'One for speed on tracks, another for precision in every move.',
+        dim: 0.38,
+        frameWidth: '330px',
+        frameHeight: '560px',
+        frameRadius: '40px'
     },
     {
         id: 3,
         src: hero3,
         caption: 'Unity - The power of team',
-        description: 'The power of unity in every move.'
+        description: 'The power of unity in every move.',
+        dim: 0.47,
+        frameWidth: '360px',
+        frameHeight: '510px',
+        frameRadius: '30px'
     },
     {
         id: 4,
         src: hero4,
-        caption: 'TheTwins of MCT, SKCET',
-        description: 'One for speed on tracks, another for precision in every move.'
+        caption: 'The driver',
+        description: 'The driver, the heart of the team, steering us to victory.',
+        dim: 0.42,
+        frameWidth: '300px',
+        frameHeight: '560px',
+        frameRadius: '44px'
     },
     {
         id: 5,
         src: hero5,
-        caption: 'The Twins of MCT, SKCET',
-        description: 'One for speed on tracks, another for precision in every move.'
+        caption: 'The leadership - 2026',
+        description: 'The leadership, the visionaries behind our success, steering us towards a brighter future.',
+        dim: 0.35,
+        frameWidth: '350px',
+        frameHeight: '530px',
+        frameRadius: '36px'
     },
     {
         id: 6,
         src: hero6,
-        caption: 'The Twins of MCT, SKCET',
-        description: 'One for speed on tracks, another for precision in every move.'
+        caption: 'Results that speak',
+        description: 'Results that speak, the trophies that tell our story of dedication and triumph.',
+        dim: 0.60,
+        frameWidth: '320px',
+        frameHeight: '540px',
+        frameRadius: '42px'
     }
 ];
 

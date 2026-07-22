@@ -5,6 +5,7 @@ import Introduction from './components/Introduction';
 import About from './components/About';
 import Leadership from './components/Leadership';
 import TechSpecs from './components/TechSpecs';
+import KnowledgeSection from './components/KnowledgeSection';
 import Achievements from './components/Achievements';
 import Sponsorship from './components/Sponsorship';
 import Gallery from './components/Gallery';
@@ -28,6 +29,9 @@ function App() {
         <About />
         <ErrorBoundary>
           <TechSpecs />
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <KnowledgeSection />
         </ErrorBoundary>
         <ErrorBoundary>
           <Achievements />

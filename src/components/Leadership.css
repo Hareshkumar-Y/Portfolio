@@ -42,7 +42,7 @@
 
 .member-image-wrapper {
     width: 100%;
-    height: 200px;
+    aspect-ratio: 1 / 1;
     border-radius: 20px;
     /* Matches mentor-image-wrapper border-radius */
     margin: 0 0 20px 0;
@@ -189,7 +189,7 @@
     }
 
     .member-image-wrapper {
-        height: 150px;
+        aspect-ratio: 1 / 1;
     }
 
     .member-name {
