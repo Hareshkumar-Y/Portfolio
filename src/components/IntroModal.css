@@ -41,7 +41,7 @@
     color: #ffffff;
     font-size: 1.1rem;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.17s ease;
     z-index: 10;
 }
 
@@ -93,7 +93,7 @@
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: all 0.3s ease;
+    transition: all 0.17s ease;
     box-shadow: 0 8px 16px rgba(211, 47, 47, 0.2);
 }
 

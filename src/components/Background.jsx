@@ -15,7 +15,7 @@ const Background = () => {
                     scale: [1, 1.2, 0.9, 1]
                 }}
                 transition={{
-                    duration: 20,
+                    duration: 11.4,
                     repeat: Infinity,
                     ease: "linear"
                 }}
@@ -30,7 +30,7 @@ const Background = () => {
                     scale: [1, 1.3, 0.8, 1]
                 }}
                 transition={{
-                    duration: 25,
+                    duration: 14.3,
                     repeat: Infinity,
                     ease: "easeInOut"
                 }}
@@ -45,7 +45,7 @@ const Background = () => {
                     rotate: [0, -180, 0],
                 }}
                 transition={{
-                    duration: 22,
+                    duration: 12.6,
                     repeat: Infinity,
                     ease: "easeInOut"
                 }}

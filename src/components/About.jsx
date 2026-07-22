@@ -13,6 +13,7 @@ const About = () => {
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
+                        transition={{ duration: 0.28 }}
                     >
                         <h2 className="section-title">About Team ASTRA</h2>
                         <h3 className="about-subtitle">Multidisciplinary Engineering Startup</h3>
@@ -29,7 +30,7 @@ const About = () => {
                             initial={{ opacity: 0, x: 50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: 0.2 }}
+                            transition={{ delay: 0.11, duration: 0.28 }}
                         >
                             <div className="vm-header">
                                 <FaRocket className="vm-icon" />
@@ -47,7 +48,7 @@ const About = () => {
                             initial={{ opacity: 0, x: 50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: 0.4 }}
+                            transition={{ delay: 0.23, duration: 0.28 }}
                         >
                             <div className="vm-header">
                                 <FaSolarPanel className="vm-icon" />

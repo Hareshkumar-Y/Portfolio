@@ -19,7 +19,7 @@ const Hero = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2 }}
+                        transition={{ delay: 0.11 }}
                         className="hero-year"
                     >
                         2026-2027
@@ -28,7 +28,7 @@ const Hero = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.4 }}
+                        transition={{ delay: 0.23 }}
                         className="hero-title"
                     >
                         TEAM ASTRA
@@ -37,7 +37,7 @@ const Hero = () => {
                     <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 0.6 }}
+                        transition={{ delay: 0.34 }}
                         className="hero-motto"
                     >
                         PER ASPERA AD ASTRA
@@ -46,7 +46,7 @@ const Hero = () => {
                     <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 0.8 }}
+                        transition={{ delay: 0.46 }}
                         className="hero-institution"
                     >
                         Sri Krishna College of Engineering and Technology
@@ -56,7 +56,7 @@ const Hero = () => {
                         className="hero-buttons"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 1 }}
+                        transition={{ delay: 0.57 }}
                     >
                         <a href="#sponsors" className="btn btn-primary">Partner With Us</a>
                         <a href="#about" className="btn btn-outline">Explore Mission</a>
@@ -73,19 +73,19 @@ const Hero = () => {
                             rotateZ: [0, 1, 0]
                         }}
                         transition={{
-                            duration: 6,
+                            duration: 3.4,
                             repeat: Infinity,
                             ease: "easeInOut"
                         }}
                         className="car-wrapper"
                     >
-                        <img src={CarImage} alt="ASTRA Solar Car" className="car-image" />
+                        <img src={CarImage} alt="ASTRA Solar Car" className="car-image" fetchpriority="high" />
 
                         {/* Floating Stats */}
                         <motion.div
                             className="stat-card stat-1"
                             animate={{ y: [0, -10, 0] }}
-                            transition={{ duration: 4, repeat: Infinity, delay: 1 }}
+                            transition={{ duration: 2.3, repeat: Infinity, delay: 0.57 }}
                         >
                             <span className="stat-value">60V</span>
                             <span className="stat-label">100Ah Battery</span>
@@ -94,7 +94,7 @@ const Hero = () => {
                         <motion.div
                             className="stat-card stat-2"
                             animate={{ y: [0, -15, 0] }}
-                            transition={{ duration: 5, repeat: Infinity, delay: 2 }}
+                            transition={{ duration: 2.85, repeat: Infinity, delay: 1.14 }}
                         >
                             <span className="stat-value">4kW</span>
                             <span className="stat-label">Powertrain</span>

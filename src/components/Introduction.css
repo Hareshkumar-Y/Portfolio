@@ -10,31 +10,6 @@
     margin: 0 auto 60px;
 }
 
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 4px;
-    background-color: var(--color-secondary);
-    border-radius: 2px;
-}
-
-.section-subtitle {
-    font-size: 1.2rem;
-    color: var(--color-text-light);
-    line-height: 1.8;
-}
-
 .intro-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -97,10 +72,6 @@
 
     .intro-header {
         margin-bottom: 30px;
-    }
-
-    .section-title {
-        font-size: 2rem;
     }
 
     .intro-grid {

@@ -10,7 +10,7 @@ const TechCard = ({ icon, title, specs, delay }) => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay, duration: 0.5 }}
+            transition={{ delay: delay * 0.57, duration: 0.28 }}
             whileHover={{ y: -15, boxShadow: "0 20px 40px rgba(46, 125, 50, 0.15)" }}
         >
             <div className="tech-icon">{icon}</div>

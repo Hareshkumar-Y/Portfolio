@@ -30,8 +30,27 @@
 }
 
 html {
+  font-size: 16px;
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
 }
 
 section[id],
@@ -97,4 +116,34 @@ ul {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-secondary-dark);
+}
+
+/* Global Typography Utilities */
+.section-title {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--color-secondary);
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: var(--color-text-light);
+  line-height: 1.8;
+}
+
+.text-center {
+  text-align: center;
 }

@@ -41,7 +41,7 @@
     padding: 30px;
     border-radius: 16px;
     border-left: 5px solid;
-    transition: transform 0.3s ease;
+    transition: transform 0.17s ease;
 }
 
 .vm-card:hover {

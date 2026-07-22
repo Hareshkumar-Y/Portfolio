@@ -28,7 +28,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.17s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .news-card:hover {
@@ -47,7 +47,7 @@
     height: auto;
     display: block;
     object-fit: contain;
-    transition: transform 0.5s ease;
+    transition: transform 0.28s ease;
 }
 
 .news-card:hover .news-image {
@@ -116,11 +116,11 @@
     font-weight: 600;
     color: var(--color-secondary, #D32F2F);
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.11s ease;
 }
 
 .read-more-link .icon-arrow {
-    transition: transform 0.2s ease;
+    transition: transform 0.11s ease;
 }
 
 .news-card:hover .read-more-link {

@@ -10,7 +10,7 @@ const IntroCard = ({ icon, title, text, delay }) => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay, duration: 0.5 }}
+            transition={{ delay: delay * 0.57, duration: 0.28 }}
             whileHover={{ y: -10 }}
         >
             <div className="intro-icon-wrapper">

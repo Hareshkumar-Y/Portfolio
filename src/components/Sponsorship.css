@@ -97,7 +97,7 @@
     color: white;
     border-radius: 50px;
     font-weight: 600;
-    transition: all 0.3s;
+    transition: all 0.17s;
 }
 
 .btn-sponsor:hover {
@@ -150,7 +150,7 @@
     justify-content: center;
     min-width: 200px;
     height: 100px;
-    transition: all 0.3s ease;
+    transition: all 0.17s ease;
     white-space: nowrap;
 }
 
@@ -167,7 +167,7 @@
     max-height: 80%;
     object-fit: contain;
     filter: grayscale(100%);
-    transition: all 0.3s ease;
+    transition: all 0.17s ease;
     opacity: 0.8;
 }
 

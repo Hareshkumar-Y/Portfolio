@@ -32,7 +32,7 @@ const HeroCarousel = ({ slides }) => {
                         initial={{ opacity: 0, x: 100 }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -100 }}
-                        transition={{ duration: 0.5, ease: "easeInOut" }}
+                        transition={{ duration: 0.28, ease: "easeInOut" }}
                     >
                         <img src={slides[currentIndex].src} alt={slides[currentIndex].caption} className="hero-carousel-image" />
                         <div className="hero-carousel-overlay">
@@ -66,7 +66,7 @@ const GallerySection = ({ title, items, delayOffset = 0 }) => (
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: delayOffset }}
+            transition={{ duration: 0.28, delay: delayOffset * 0.57 }}
         >
             {title}
         </motion.h3>
@@ -78,7 +78,7 @@ const GallerySection = ({ title, items, delayOffset = 0 }) => (
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: delayOffset + (index * 0.1) }}
+                    transition={{ duration: 0.28, delay: delayOffset * 0.57 + (index * 0.06) }}
                 >
                     <img src={item.src} alt={item.caption} className="gallery-image" loading="lazy" />
                     <div className="gallery-overlay">
@@ -99,7 +99,7 @@ const Gallery = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.28 }}
                 >
                     Gallery
                 </motion.h2>

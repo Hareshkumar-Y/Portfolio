@@ -11,7 +11,7 @@ const NewsCard = ({ image, category, date, title, description, delay }) => {
             initial={{ opacity: 0, y: 35 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay, duration: 0.5, ease: 'easeOut' }}
+            transition={{ delay: delay * 0.57, duration: 0.28, ease: 'easeOut' }}
             whileHover={{ y: -10 }}
         >
             <div className="news-image-wrapper">
@@ -43,7 +43,7 @@ const News = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.28 }}
                 >
                     <h2 className="section-title">News & Announcements</h2>
                     <p className="section-subtitle">
@@ -60,7 +60,7 @@ const News = () => {
                             date={post.date}
                             title={post.title}
                             description={post.description}
-                            delay={0.1 + index * 0.15}
+                            delay={0.06 + index * 0.09}
                         />
                     ))}
                 </div>

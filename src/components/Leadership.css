@@ -27,7 +27,7 @@
     /* Matches mentor-showcase border */
     text-align: left;
     /* Left aligned like mentor-content */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.17s ease, box-shadow 0.17s ease;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -111,7 +111,7 @@
     max-width: 900px;
     gap: 40px;
     border: 1px solid rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+    transition: transform 0.17s ease;
 }
 
 .mentor-showcase:hover {

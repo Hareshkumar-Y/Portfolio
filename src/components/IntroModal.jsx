@@ -14,7 +14,7 @@ const IntroModal = () => {
             // Slight delay before launching the modal for a better UX transition
             const timer = setTimeout(() => {
                 setIsOpen(true);
-            }, 800);
+            }, 450);
             return () => clearTimeout(timer);
         }
     }, []);
@@ -54,7 +54,7 @@ const IntroModal = () => {
                         initial={{ scale: 0.85, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         exit={{ scale: 0.85, opacity: 0 }}
-                        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+                        transition={{ type: 'spring', damping: 30, stiffness: 350 }}
                         onClick={(e) => e.stopPropagation()}
                     >
                         <button 

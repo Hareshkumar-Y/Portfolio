@@ -11,7 +11,7 @@ const PackageCard = ({ tier, price, features, recommended, delay }) => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay, duration: 0.5 }}
+            transition={{ delay: delay * 0.57, duration: 0.28 }}
             whileHover={{ y: -10 }}
         >
             {recommended && <div className="badge">Best Value</div>}
@@ -77,7 +77,7 @@ const Sponsorship = () => {
                                 x: {
                                     repeat: Infinity,
                                     repeatType: "loop",
-                                    duration: 80,
+                                    duration: 45.7,
                                     ease: "linear"
                                 }
                             }}
@@ -103,7 +103,7 @@ const Sponsorship = () => {
                                 x: {
                                     repeat: Infinity,
                                     repeatType: "loop",
-                                    duration: 80,
+                                    duration: 45.7,
                                     ease: "linear"
                                 }
                             }}

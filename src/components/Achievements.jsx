@@ -11,7 +11,7 @@ const TimelineItem = ({ year, title, awards, side, delay }) => {
             initial={{ opacity: 0, x: side === 'left' ? -50 : 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ delay, duration: 0.5 }}
+            transition={{ delay: delay * 0.57, duration: 0.28 }}
         >
             <div className="timeline-content">
                 <div className="year-badge">{year}</div>
@@ -58,7 +58,7 @@ const Achievements = () => {
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        transition={{ delay: 0.4 }}
+                        transition={{ delay: 0.23, duration: 0.28 }}
                     >
                         <div className="timeline-content champion-card">
                             <div className="champion-icon"><FaTrophy /></div>
