@@ -17,18 +17,35 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const navLinks = [
-        { name: "Introduction", href: "#intro" },
-        { name: "About Us", href: "#about" },
-        { name: "Technical Overview", href: "#tech" },
-        { name: "Knowledge by ASTRA", href: "#knowledge" },
-        { name: "Achievements", href: "#achievements" },
-        { name: "News", href: "#news" },
-        { name: "The Team", href: "#team" },
-        { name: "Sponsors", href: "#sponsors" },
-        { name: "Gallery", href: "#gallery" },
-        { name: "Contact", href: "#contact" },
+    const navSections = [
+        {
+            title: 'Explore',
+            links: [
+                { name: 'Introduction', href: '#intro' },
+                { name: 'About Us', href: '#about' },
+                { name: 'Technical Overview', href: '#tech' },
+                { name: 'Knowledge by ASTRA', href: '#knowledge' },
+            ],
+        },
+        {
+            title: 'Highlights',
+            links: [
+                { name: 'Achievements', href: '#achievements' },
+                { name: 'News', href: '#news' },
+                { name: 'Gallery', href: '#gallery' },
+            ],
+        },
+        {
+            title: 'Connect',
+            links: [
+                { name: 'The Team', href: '#team' },
+                { name: 'Sponsors', href: '#sponsors' },
+                { name: 'Contact', href: '#contact' },
+            ],
+        },
     ];
+
+    const navLinks = navSections.flatMap((section) => section.links);
 
     const scrollToSection = (e, href) => {
         e.preventDefault();
@@ -49,15 +66,24 @@ const Navbar = () => {
                 </a>
 
                 <div className="desktop-menu">
-                    {navLinks.map((link) => (
-                        <a
-                            key={link.name}
-                            href={link.href}
-                            onClick={(e) => scrollToSection(e, link.href)}
-                            className="nav-link"
-                        >
-                            {link.name}
-                        </a>
+                    {navSections.map((section) => (
+                        <div key={section.title} className="nav-group">
+                            <button type="button" className="nav-group-toggle">
+                                {section.title}
+                            </button>
+                            <div className="nav-dropdown">
+                                {section.links.map((link) => (
+                                    <a
+                                        key={link.name}
+                                        href={link.href}
+                                        onClick={(e) => scrollToSection(e, link.href)}
+                                        className="nav-link nav-dropdown-link"
+                                    >
+                                        {link.name}
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
                     ))}
                 </div>
 
@@ -82,17 +108,33 @@ const Navbar = () => {
                     <motion.div
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
                         className="mobile-menu"
                     >
-                        {navLinks.map((link) => (
-                            <a
-                                key={link.name}
-                                href={link.href}
-                                onClick={(e) => scrollToSection(e, link.href)}
-                                className="mobile-link"
-                            >
-                                {link.name}
-                            </a>
+                        <button
+                            type="button"
+                            className="mobile-close-btn"
+                            aria-label="Close navigation menu"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            <FaTimes />
+                        </button>
+                        {navSections.map((section) => (
+                            <div key={section.title} className="mobile-menu-section">
+                                <span className="mobile-section-title">{section.title}</span>
+                                <div className="mobile-section-links">
+                                    {section.links.map((link) => (
+                                        <a
+                                            key={link.name}
+                                            href={link.href}
+                                            onClick={(e) => scrollToSection(e, link.href)}
+                                            className="mobile-link"
+                                        >
+                                            {link.name}
+                                        </a>
+                                    ))}
+                                </div>
+                            </div>
                         ))}
                     </motion.div>
                 )}
